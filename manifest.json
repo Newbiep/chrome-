@@ -1,0 +1,21 @@
+{
+  "name": "网课插入",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css": ["css/a.css"],
+    "js": ["jquery-3.4.1.min.js", "a.js"],
+    "run_at": "document_start"
+  }],
+  "manifest_version": 2
+}
